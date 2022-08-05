@@ -1,0 +1,22 @@
+{
+    "app_title": "FlutMovie Booilerplate",
+    "lp_title": "Login Form",
+    "lp_username_hint": "Tên đăng nhập",
+    "lp_password_hint": "Mật khẩu",
+    "lp_login_button": "Đăng nhập",
+    "sp_signature": "Movie APP Example",
+    "logout": "Đăng xuất",
+    "app_starting": "Khởi động",
+    "looking_authentication": "Xác thực",
+    "fetching_info": "Tải thông tin",
+    "redirecting_to_page": "Đang điều hướng tới màn hình {0}",
+    "exiting": "Đang thoát",
+    "error_when_save": "Có lỗi xảy ra khi {0}",
+    "incorrect_username_or_password": "Tên đăng nhập và mật khẩu không đúng, [username: admin, password: admin]",
+    "token_invalid": "Token không đúng",
+    "need_network_connection": "Cần kết nối mạng...",
+    "home_search_movie_hint": "Tìm kiếm Phim",
+    "home_open_button": "Mở",
+    "profile": "Hồ sơ",
+    "movie_not_fount": "Không tìm thấy movie({0})"
+}

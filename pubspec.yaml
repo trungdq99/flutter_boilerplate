@@ -1,0 +1,97 @@
+name: flutter_boilerplate
+description: A new Flutter project.
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.5 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # google translator
+  translator: ^0.1.7
+
+  # bloc is for state managment
+  flutter_bloc: ^8.0.0
+  bloc: ^8.0.0
+  equatable: ^2.0.3
+
+  # dio is for api/network connections
+  dio: ^4.0.6
+
+  # flushbar is for showing message on screen
+  another_flushbar: ^1.10.29
+
+  # shared_preferences is for storing data on local
+  shared_preferences: ^2.0.15
+
+  #get_it is for dependency injection
+  get_it: ^7.2.0
+
+  # injectable is for code generation
+  injectable: ^1.5.3
+
+  # sembast is for create db on local
+  sembast: ^3.2.0+1
+
+  # path_provider is for getting application path from device.
+  path_provider: ^2.0.11
+
+  # google_fonts is for installing google fonts from the internet easly.
+  google_fonts: ^3.0.1
+
+  # dartz is for using Either class
+  dartz: ^0.10.1
+
+  # connectivity is for checking if device connected to the internet
+  connectivity_plus: ^2.3.6
+
+  analyzer: ^4.3.1
+  build_resolvers: ^2.0.9
+  json_annotation: ^4.6.0
+  path: ^1.8.1
+
+  # change package name
+  # Run this command to change name:
+  # flutter pub run change_app_package_name:main com.new.package.name
+  # Replace com.new.package.name to with your package name
+  change_app_package_name: ^1.1.0
+
+  intl: ^0.17.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+  # build_runner, injectable_generator is for code generation
+  build_runner: ^2.2.0
+  injectable_generator: ^1.5.4
+  json_serializable: ^6.3.1
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/lang/en.json
+    - assets/lang/tr.json
+    - assets/lang/vi.json
