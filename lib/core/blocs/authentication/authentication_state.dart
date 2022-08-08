@@ -1,8 +1,4 @@
-import 'package:equatable/equatable.dart';
-
-import '../../../domain/entities/user_entity.dart';
-import '../../consts/enums.dart';
-import '../bases/bloc_state_base.dart';
+part of 'authentication_bloc.dart';
 
 class AuthenticationState extends Equatable {
   final String? token;

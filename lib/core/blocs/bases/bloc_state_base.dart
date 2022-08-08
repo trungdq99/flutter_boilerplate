@@ -2,7 +2,7 @@ import '../../../presentations/home/bloc/home_state.dart';
 import '../../../presentations/login/bloc/index.dart';
 import '../../consts/enums.dart';
 import '../../widgets/index.dart';
-import '../authentication/index.dart';
+import '../authentication/authentication_bloc.dart';
 
 /// [BlocOnMessageStateBase] is used for showing message to user from the Block via [AppBlocFlushbarShow].
 /// When a bloc fire a [BlocOnMessageStateBase] state, user will see the [message] on the screen

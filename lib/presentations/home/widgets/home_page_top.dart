@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../core/blocs/authentication/index.dart';
+import '../../../core/blocs/authentication/authentication_bloc.dart';
 import '../../../core/consts/enums.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/utils/validations.dart';

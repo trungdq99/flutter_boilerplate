@@ -1,12 +1,14 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_it/get_it.dart';
 
-import 'core/blocs/authentication/index.dart';
-import 'core/blocs/bootstart/index.dart';
+import 'core/blocs/authentication/authentication_bloc.dart';
+import 'core/blocs/bootstart/bootstart_bloc.dart';
 import 'core/localization/app_localizations.dart';
 import 'core/theme/app_theme.dart';
+import 'core/utils/logger_utils.dart';
 import 'core/widgets/index.dart';
 import 'dependency_injection.dart' as di;
 import 'presentations/home/pages/home_page.dart';
@@ -16,7 +18,12 @@ import 'presentations/splash/pages/splash_page.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await di.configure(di.Env.prod);
-  runApp(const AppBootStart());
+  runZonedGuarded(
+    () => const AppBootStart(),
+    (error, stack) {
+      LoggerUtils.error('Error when start booting App', error, stack);
+    },
+  );
 }
 
 /// [AppBootStart] is the root of your application.

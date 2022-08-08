@@ -1,13 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
-
-import '../../../domain/entities/user_entity.dart';
-import '../../../domain/usecases/usecase.dart';
-import '../authentication/index.dart';
-import '../bases/bloc_event_base.dart';
-import 'index.dart';
+part of 'bootstart_bloc.dart';
 
 class BootstartEvent extends BlocEventBase<BootStartState, BootStartBloc> {
   BootstartEvent({super.toState});

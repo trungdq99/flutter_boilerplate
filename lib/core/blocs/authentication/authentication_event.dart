@@ -1,13 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../domain/entities/user_entity.dart';
-import '../../../domain/usecases/usecase.dart';
-import '../bases/bloc_event_base.dart';
-import '../bootstart/bootstart_bloc.dart';
-import '../bootstart/bootstart_event.dart';
-import 'index.dart';
+part of 'authentication_bloc.dart';
 
 class AuthenticationEvent
     extends BlocEventBase<AuthenticationState, AuthenticationBloc> {

@@ -1,5 +1,4 @@
-import '../../consts/enums.dart';
-import '../bases/bloc_state_base.dart';
+part of 'bootstart_bloc.dart';
 
 abstract class BootStartState {}
 
