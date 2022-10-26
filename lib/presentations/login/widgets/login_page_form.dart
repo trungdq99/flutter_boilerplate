@@ -5,9 +5,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../../core/blocs/authentication/authentication_bloc.dart';
+import '../../../core/localization/app_localization_key.dart';
 import '../../../core/theme/app_colors.dart';
-import '../../../core/widgets/index.dart';
-import '../bloc/index.dart';
+import '../../../core/widgets/widgets.dart';
+import '../bloc/login_bloc.dart';
 import '../cubit/login_form_field_cubit.dart';
 
 class LoginPageForm extends StatefulWidget {
@@ -54,7 +55,7 @@ class _LoginPageFormState extends State<LoginPageForm> {
           child: Column(
             children: <Widget>[
               AppTextField(
-                hintText: widget.t("lp_username_hint"),
+                hintText: widget.t(AppLocalizationKey.lpUsernameHint),
                 controller: usernameTextController,
                 icon: Icons.person,
                 shape: RoundedRectangleBorder(
@@ -66,7 +67,7 @@ class _LoginPageFormState extends State<LoginPageForm> {
               BlocBuilder<LoginFormFieldCubit, LoginFormFieldState>(
                   builder: (context, state) {
                 return AppTextField(
-                  hintText: widget.t("lp_password_hint"),
+                  hintText: widget.t(AppLocalizationKey.lpPasswordHint),
                   controller: passwordTextController,
                   obscureText: !state.showPassword,
                   icon: Icons.remove_red_eye,
@@ -86,7 +87,7 @@ class _LoginPageFormState extends State<LoginPageForm> {
               AppFadeAnimation(
                 duration: const Duration(milliseconds: 1400),
                 child: AppGradientButton(
-                  buttonText: widget.t('lp_login_button'),
+                  buttonText: widget.t(AppLocalizationKey.lpLoginButton),
                   onTap: () {
                     _loginBloc.add(LoadLoginEvent(usernameTextController.text,
                         passwordTextController.text));

@@ -62,7 +62,7 @@ class _AppLocalizationsDelegate
   const _AppLocalizationsDelegate();
   @override
   bool isSupported(Locale locale) {
-    return ['en', 'tr', 'vi'].contains(locale.languageCode);
+    return ['en', 'vi'].contains(locale.languageCode);
   }
 
   @override

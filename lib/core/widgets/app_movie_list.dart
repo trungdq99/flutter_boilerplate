@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../domain/entities/movie_entity.dart';
 import '../consts/enums.dart';
+import '../localization/app_localization_key.dart';
 import '../theme/app_colors.dart';
 import '../utils/validations.dart';
-import 'index.dart';
+import 'widgets.dart';
 
 class AppMovieList extends StatelessWidget {
   final List<MovieEntity> movieList;
@@ -98,7 +99,7 @@ class AppMovieList extends StatelessWidget {
           );
         },
         child: AppRawChip(
-          label: t("home_open_button"),
+          label: t(AppLocalizationKey.homeOpenButton),
           backgroundColor: AppColors.navyBlue,
           radius: 5,
           color: AppColors.sky[300]!,

@@ -1,11 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import '../../../domain/repository/repository.dart';
-import '../../../domain/usecases/usecase.dart';
-import '../../../presentations/login/bloc/index.dart';
 import '../../consts/enums.dart';
 import '../../failures/failure.dart';
-import 'bloc_state_base.dart';
 
 abstract class AppBlocBase {
   /// It is a optional method.

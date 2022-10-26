@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/theme/app_colors.dart';
-import '../../../core/widgets/index.dart';
-import '../widgets/index.dart';
+import '../../../core/widgets/widgets.dart';
+import '../widgets/widgets.dart';
 
 // ignore: must_be_immutable
 class SplashPage extends StatelessWidget {

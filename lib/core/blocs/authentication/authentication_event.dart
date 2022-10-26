@@ -65,7 +65,7 @@ class AuthenticationLogoutEvent extends AuthenticationEvent {
     required Emitter<AuthenticationState> emit,
   }) async {
     emit(AuthenticationOnMessageState.fromOldState(currentState,
-        message: t('exiting')));
+        message: t(AppLocalizationKey.exiting)));
     await bloc.clearUserToken(NoParams());
     await Future.delayed(const Duration(seconds: 1));
     emit(const UnAuthenticationState(token: null, user: null));

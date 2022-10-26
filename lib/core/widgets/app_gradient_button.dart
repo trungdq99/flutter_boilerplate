@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../consts/enums.dart';
 import '../theme/app_colors.dart';
-import 'index.dart';
+import 'widgets.dart';
 
 class AppGradientButton extends StatelessWidget {
   final Gradient? gradient;

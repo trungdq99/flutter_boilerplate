@@ -1,9 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/core/utils/logger_utils.dart';
 
 import '../consts/enums.dart';
-import '../widgets/index.dart';
+import '../widgets/widgets.dart';
 
 /// [ScreenUtils] is a library for the responsiveness.
 /// [ScreenUtils] converts font, icon, padding size across devices to get responsiveness.
@@ -75,7 +76,7 @@ class ScreenUtils {
     double width = window.physicalSize.width;
     double height = window.physicalSize.height;
 
-    debugPrint('$width * $height');
+    LoggerUtils.info('$width * $height');
     if (width <= 240) {
       deviceSize = SizeType.xxSmall;
     } else if (width <= 360) {
@@ -95,7 +96,7 @@ class ScreenUtils {
     } else {
       deviceSize = SizeType.mega;
     }
-    debugPrint('$width $deviceSize');
+    LoggerUtils.info('$width $deviceSize');
   }
 
   get _sizeFontMultiplier {

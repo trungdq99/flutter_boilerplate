@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../core/widgets/index.dart';
-import '../bloc/index.dart';
-import '../widgets/index.dart';
+import '../../../core/widgets/widgets.dart';
+import '../bloc/login_bloc.dart';
+import '../widgets/widgets.dart';
 
 class LoginPage extends StatelessWidget {
   final LoginBloc _loginBloc = GetIt.instance.get<LoginBloc>();
@@ -36,7 +36,7 @@ class LoginPage extends StatelessWidget {
               ),
             ),
             blocMessageBuilder(context, _loginBloc),
-            blocProgressBuilder(context, _loginBloc)
+            blocProgressBuilder(_loginBloc)
           ],
         ),
       ),

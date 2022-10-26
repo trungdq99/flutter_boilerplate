@@ -2,6 +2,7 @@ import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../core/localization/app_localization_base.dart';
+import '../../../core/localization/app_localization_key.dart';
 import '../../exceptions/sharedpref_exception.dart';
 import '../sharedpref_consts.dart';
 
@@ -16,7 +17,7 @@ class AuthenticationDataSource extends AppLocalizationBase {
       bool result =
           await sharedPreferences.setString(SharedPrefConsts.tokenKey, token);
       if (!result) {
-        throw SharedPrefException(t("error_when_save", params: ["token"]));
+        throw SharedPrefException(t(AppLocalizationKey.errorWhenSave, params: ["token"]));
       }
     } catch (err) {
       throw SharedPrefException(err);

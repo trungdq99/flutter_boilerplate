@@ -1,9 +1,4 @@
-import 'package:equatable/equatable.dart';
-
-import '../../../core/blocs/bases/bloc_state_base.dart';
-import '../../../core/consts/enums.dart';
-import '../../../data/models/movie_model.dart';
-import '../../../domain/entities/movie_entity.dart';
+part of 'home_bloc.dart';
 
 abstract class HomeState extends Equatable {
   final List<MovieEntity> movieList;

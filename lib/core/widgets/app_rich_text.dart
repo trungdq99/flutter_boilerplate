@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../consts/app_consts.dart';
 import '../consts/enums.dart';
 import '../theme/app_colors.dart';
-import 'index.dart';
+import 'widgets.dart';
 
 class AppRichText extends StatelessWidget {
   final String text;

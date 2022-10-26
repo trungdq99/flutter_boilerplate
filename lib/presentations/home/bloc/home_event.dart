@@ -1,11 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../core/blocs/bases/bloc_event_base.dart';
-import '../../../domain/usecases/movie/search_movie_by_title.dart';
-import '../../../domain/usecases/usecase.dart';
-import 'index.dart';
+part of 'home_bloc.dart';
 
 class HomeEvent extends BlocEventBase<HomeState, HomeBloc> {
   HomeEvent({super.toState});

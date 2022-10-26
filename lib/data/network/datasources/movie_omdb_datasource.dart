@@ -1,6 +1,7 @@
 import 'package:injectable/injectable.dart';
 
 import '../../../core/localization/app_localization_base.dart';
+import '../../../core/localization/app_localization_key.dart';
 import '../../../core/utils/validations.dart';
 import '../../exceptions/remote_server_exception.dart';
 import '../../models/movie_model.dart';
@@ -43,7 +44,7 @@ class MovieOmdbDataSource extends IMovieDataSource with ApiDataSourceBase {
       List<dynamic> movieMapList = response.data['Search'];
 
       if (!Validations.lNotNullOrEmpty(movieMapList)) {
-        throw Exception(t("movie_not_fount", params: [title]));
+        throw Exception(t(AppLocalizationKey.movieNotFound, params: [title]));
       }
 
       List<MovieModel> movieList = <MovieModel>[];

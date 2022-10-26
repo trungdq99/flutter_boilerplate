@@ -3,11 +3,11 @@ import 'package:get_it/get_it.dart';
 
 import '../../../core/blocs/authentication/authentication_bloc.dart';
 import '../../../core/consts/enums.dart';
+import '../../../core/localization/app_localization_key.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/utils/validations.dart';
-import '../../../core/widgets/index.dart';
+import '../../../core/widgets/widgets.dart';
 import '../bloc/home_bloc.dart';
-import '../bloc/home_event.dart';
 
 class HomePageTop extends StatelessWidget {
   final TextEditingController txtSearchMovieController =
@@ -49,7 +49,7 @@ class HomePageTop extends StatelessWidget {
   AppTextField buildSearchTextField() {
     return AppTextField(
       icon: Icons.search,
-      hintText: t('home_search_movie_hint'),
+      hintText: t(AppLocalizationKey.homeSearchMovieHint),
       controller: txtSearchMovieController,
       onIconClick: () {
         String input = txtSearchMovieController.text;
@@ -98,9 +98,9 @@ class HomePageTop extends StatelessWidget {
               ),
               PopupMenuButton(
                   onSelected: (selected) {
-                    if (selected == t('profile')) {
+                    if (selected == t(AppLocalizationKey.profile)) {
                       debugPrint('ProfileClicked');
-                    } else if (selected == t('logout')) {
+                    } else if (selected == t(AppLocalizationKey.logout)) {
                       GetIt.instance
                           .get<AuthenticationBloc>()
                           .add(AuthenticationLogoutEvent());
@@ -114,12 +114,12 @@ class HomePageTop extends StatelessWidget {
                   itemBuilder: (_) {
                     return [
                       PopupMenuItem(
-                        value: t('profile'),
-                        child: Text(t('profile')),
+                        value: t(AppLocalizationKey.profile),
+                        child: Text(t(AppLocalizationKey.profile)),
                       ),
                       PopupMenuItem(
-                        value: t('logout'),
-                        child: Text(t('logout')),
+                        value: t(AppLocalizationKey.logout),
+                        child: Text(t(AppLocalizationKey.logout)),
                       )
                     ];
                   }),

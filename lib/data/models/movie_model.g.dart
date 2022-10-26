@@ -6,7 +6,8 @@ part of 'movie_model.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-MovieModel _$MovieModelFromJson(Map<String, dynamic> json) => MovieModel(
+_$_MovieModel _$$_MovieModelFromJson(Map<String, dynamic> json) =>
+    _$_MovieModel(
       title: json['Title'] as String?,
       year: json['Year'] as String?,
       rated: json['Rated'] as String?,
@@ -23,7 +24,7 @@ MovieModel _$MovieModelFromJson(Map<String, dynamic> json) => MovieModel(
       imdbID: json['imdbID'] as String?,
     );
 
-Map<String, dynamic> _$MovieModelToJson(MovieModel instance) {
+Map<String, dynamic> _$$_MovieModelToJson(_$_MovieModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

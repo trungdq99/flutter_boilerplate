@@ -38,9 +38,16 @@ import 'presentations/splash/cubit/splash_cubit.dart'
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
-_i1.GetIt $initGetIt(_i1.GetIt get,
-    {String? environment, _i2.EnvironmentFilter? environmentFilter}) {
-  final gh = _i2.GetItHelper(get, environment, environmentFilter);
+_i1.GetIt $initGetIt(
+  _i1.GetIt get, {
+  String? environment,
+  _i2.EnvironmentFilter? environmentFilter,
+}) {
+  final gh = _i2.GetItHelper(
+    get,
+    environment,
+    environmentFilter,
+  );
   gh.lazySingleton<_i3.AuthenticationDataSource>(() =>
       _i3.AuthenticationDataSource(
           sharedPreferences: get<_i4.SharedPreferences>()));
@@ -51,13 +58,14 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.factory<_i9.SplashCubit>(() => _i9.SplashCubit());
   gh.lazySingleton<_i10.UserLocalDataSource>(
       () => _i10.UserLocalDataSource(database: get<_i7.Database>()));
-  gh.lazySingleton<_i11.RepositoryDependencies>(() =>
-      _i11.RepositoryDependencies(
-          connectivityUtils: get<_i12.ConnectivityUtils>(),
-          authenticationDataSource: get<_i3.AuthenticationDataSource>(),
-          userLocalDataSource: get<_i10.UserLocalDataSource>(),
-          movieOmdbDataSource: get<_i8.MovieOmdbDataSource>(),
-          movieLocalDataSource: get<_i6.MovieLocalDataSource>()));
+  gh.lazySingleton<_i11.RepositoryDependencies>(
+      () => _i11.RepositoryDependencies(
+            connectivityUtils: get<_i12.ConnectivityUtils>(),
+            authenticationDataSource: get<_i3.AuthenticationDataSource>(),
+            userLocalDataSource: get<_i10.UserLocalDataSource>(),
+            movieOmdbDataSource: get<_i8.MovieOmdbDataSource>(),
+            movieLocalDataSource: get<_i6.MovieLocalDataSource>(),
+          ));
   gh.lazySingleton<_i11.Repository>(
       () => _i11.Repository(d: get<_i11.RepositoryDependencies>()));
   gh.lazySingleton<_i13.SearchMovieByTitle>(
@@ -79,26 +87,31 @@ _i1.GetIt $initGetIt(_i1.GetIt get,
   gh.lazySingleton<_i21.GetUserToken>(
       () => _i21.GetUserToken(repository: get<_i11.Repository>()));
   gh.lazySingleton<_i22.HomeBloc>(() => _i22.HomeBloc(
-      getLocalMovieList: get<_i17.GetLocalMovieList>(),
-      searchMovieByTitle: get<_i13.SearchMovieByTitle>()));
+        getLocalMovieList: get<_i17.GetLocalMovieList>(),
+        searchMovieByTitle: get<_i13.SearchMovieByTitle>(),
+      ));
   gh.lazySingleton<_i23.IsAuthenticatedUser>(
       () => _i23.IsAuthenticatedUser(repository: get<_i11.Repository>()));
   gh.lazySingleton<_i24.IsLocalMovieEmpty>(
       () => _i24.IsLocalMovieEmpty(repository: get<_i11.Repository>()));
   gh.factory<_i25.LoginBloc>(() => _i25.LoginBloc(
-      doLogin: get<_i16.DoLogin>(), setToken: get<_i14.SetUserToken>()));
+        doLogin: get<_i16.DoLogin>(),
+        setToken: get<_i14.SetUserToken>(),
+      ));
   gh.lazySingleton<_i26.MovieBootstartSync>(
       () => _i26.MovieBootstartSync(repository: get<_i11.Repository>()));
   gh.lazySingleton<_i27.AuthenticationBloc>(() => _i27.AuthenticationBloc(
-      getAuthenticatedUser: get<_i20.GetUserByToken>(),
-      getUserToken: get<_i21.GetUserToken>(),
-      clearUserToken: get<_i15.ClearUserToken>()));
+        getAuthenticatedUser: get<_i20.GetUserByToken>(),
+        getUserToken: get<_i21.GetUserToken>(),
+        clearUserToken: get<_i15.ClearUserToken>(),
+      ));
   gh.lazySingleton<_i28.BootStartBloc>(() => _i28.BootStartBloc(
-      connectivityUtils: get<_i12.ConnectivityUtils>(),
-      isAuthenticatedUser: get<_i23.IsAuthenticatedUser>(),
-      getToken: get<_i21.GetUserToken>(),
-      getAuthenticatedUser: get<_i20.GetUserByToken>(),
-      isLocalMovieEmpty: get<_i24.IsLocalMovieEmpty>(),
-      movieBootstartSync: get<_i26.MovieBootstartSync>()));
+        connectivityUtils: get<_i12.ConnectivityUtils>(),
+        isAuthenticatedUser: get<_i23.IsAuthenticatedUser>(),
+        getToken: get<_i21.GetUserToken>(),
+        getAuthenticatedUser: get<_i20.GetUserByToken>(),
+        isLocalMovieEmpty: get<_i24.IsLocalMovieEmpty>(),
+        movieBootstartSync: get<_i26.MovieBootstartSync>(),
+      ));
   return get;
 }

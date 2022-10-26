@@ -10,11 +10,10 @@ import '../../../domain/usecases/authentication/is_authenticated_user.dart';
 import '../../../domain/usecases/movie/is_local_movie_empty.dart';
 import '../../../domain/usecases/movie/movie_bootstart_sync.dart';
 import '../../consts/enums.dart';
+import '../../localization/app_localization_key.dart';
 import '../../utils/connectivity_utils.dart';
 import '../authentication/authentication_bloc.dart';
-import '../bases/bloc_base.dart';
-import '../bases/bloc_event_base.dart';
-import '../bases/bloc_state_base.dart';
+import '../base/base.dart';
 
 part 'bootstart_event.dart';
 part 'bootstart_state.dart';
@@ -36,7 +35,7 @@ class BootStartBloc extends Bloc<BootstartEvent, BootStartState>
     required this.getAuthenticatedUser,
     required this.isLocalMovieEmpty,
     required this.movieBootstartSync,
-  }) : super(UnBootstartState()) {
+  }) : super(UnBootStartState()) {
     on<BootstartEvent>(
       (event, emit) => event.applyAsync(
         currentState: state,
@@ -49,7 +48,7 @@ class BootStartBloc extends Bloc<BootstartEvent, BootStartState>
   @override
   void toOnMessageState(String message, MessageType type) {
     add(BootstartEvent(
-        toState: BootstartStateOnMessageState.fromOldSettingState(
+        toState: BootStartOnMessageState.fromOldState(
             message: message, type: type)));
   }
 }

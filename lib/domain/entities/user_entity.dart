@@ -1,27 +1,42 @@
+import 'package:equatable/equatable.dart';
+
 import '../../data/models/user_model.dart';
 
-// API den gelen modelleri entityden ayırdık çünkü, Entitynin içine ui yada bloc ile ilgili extra tanımalamalar yapılabilir.
-// Mesela bir for döngüsü kurulacaktır, for döngüsünün statesini UserEntity için tanımlayacak properyler konulabilir.
-// Bir model bir çok Entitynin üst sınıfı.
-// Repositoryler Entity ile çalışır.
-class UserEntity extends UserModel {
+class UserEntity extends Equatable {
+  final int? id;
+  final String? username;
+  final String? password;
+  final String? fullname;
+  final int? age;
+  final String? country;
+  final String? twitterAccount;
   const UserEntity({
-    super.id,
-    super.username,
-    super.password,
-    super.fullname,
-    super.country,
-    super.twitterAccount,
-    super.age,
+    this.id,
+    this.username,
+    this.password,
+    this.age,
+    this.fullname,
+    this.country,
+    this.twitterAccount,
   });
-  // Eğer bunu her entity için yapmak sana zor geliyorsa ve gerek duymuyorsan, Entityleri silip yerine Modelleri kullanabilirsin.
   factory UserEntity.fromModel(UserModel model) => UserEntity(
         id: model.id,
         username: model.username,
         password: model.password,
         fullname: model.fullname,
+        age: model.age,
         country: model.country,
         twitterAccount: model.twitterAccount,
-        age: model.age,
       );
+
+  @override
+  List<Object?> get props => [
+        id,
+        username,
+        password,
+        fullname,
+        age,
+        country,
+        twitterAccount,
+      ];
 }

@@ -8,9 +8,8 @@ import '../../../domain/usecases/usecase.dart';
 import '../../../domain/usecases/user/get_user_by_token.dart';
 import '../../../domain/usecases/authentication/get_token.dart';
 import '../../consts/enums.dart';
-import '../bases/bloc_base.dart';
-import '../bases/bloc_event_base.dart';
-import '../bases/bloc_state_base.dart';
+import '../../localization/app_localization_key.dart';
+import '../base/base.dart';
 
 part 'authentication_event.dart';
 part 'authentication_state.dart';

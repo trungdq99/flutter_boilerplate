@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../consts/app_consts.dart';
 import '../consts/enums.dart';
 import '../theme/app_colors.dart';
-import 'index.dart';
+import 'widgets.dart';
 
 /// [AppGTText] translated the [text] string from the google, and show it a [AppRichText] component.
 class AppGTText extends StatelessWidget {

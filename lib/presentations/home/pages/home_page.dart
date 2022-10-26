@@ -3,9 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 import '../../../core/theme/app_colors.dart';
-import '../../../core/widgets/index.dart';
-import '../bloc/index.dart';
-import '../widgets/index.dart';
+import '../../../core/widgets/widgets.dart';
+import '../bloc/home_bloc.dart';
+import '../widgets/widgets.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
@@ -35,7 +35,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
             blocMessageBuilder(context, _homeBloc),
-            blocProgressBuilder(context, _homeBloc)
+            blocProgressBuilder(_homeBloc)
           ],
         ),
       ),

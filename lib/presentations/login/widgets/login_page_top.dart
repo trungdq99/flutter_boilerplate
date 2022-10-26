@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/theme/app_colors.dart';
-import '../../../core/widgets/index.dart';
+import '../../../core/widgets/widgets.dart';
 
 class LoginPageTop extends StatelessWidget {
   const LoginPageTop({Key? key}) : super(key: key);

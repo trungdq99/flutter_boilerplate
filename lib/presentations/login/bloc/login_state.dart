@@ -1,5 +1,4 @@
-import '../../../core/blocs/bases/bloc_state_base.dart';
-import '../../../core/consts/enums.dart';
+part of 'login_bloc.dart';
 
 // ignore: must_be_immutable
 abstract class LoginState {

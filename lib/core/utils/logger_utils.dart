@@ -1,7 +1,3 @@
-/*
- * Author: Trung Shin
- */
-
 import 'package:logger/logger.dart';
 
 /// Show beautiful log

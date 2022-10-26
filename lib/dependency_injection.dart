@@ -14,7 +14,7 @@ import 'core/utils/screen_utils.dart';
 import 'data/local/local_consts.dart';
 import 'dependency_injection.config.dart';
 
-GetIt getIt = GetIt.instance;
+final getIt = GetIt.instance;
 
 @injectableInit
 Future<void> configure(String environment) async {
@@ -29,13 +29,7 @@ Future<void> configure(String environment) async {
 
   getIt.registerFactory<ConnectivityUtils>(
       () => ConnectivityUtils(connectivity: Connectivity()));
-
   $initGetIt(getIt, environment: environment);
-}
-
-abstract class Env {
-  static const dev = "dev";
-  static const prod = "prod";
 }
 
 /// [configureUI] Registers the ui dependencies like localization, screenutils(reposiveness) which depends on the context.

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../domain/entities/movie_entity.dart';
 import '../consts/enums.dart';
 import '../theme/app_colors.dart';
-import 'index.dart';
+import 'widgets.dart';
 
 class AppMovieDetails extends StatelessWidget {
   final MovieEntity movieEntity;

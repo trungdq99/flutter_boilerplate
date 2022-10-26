@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
-import '../blocs/bases/bloc_state_base.dart';
+import '../blocs/base/bloc_state_base.dart';
 import '../consts/enums.dart';
 import '../localization/app_localizations.dart';
 import '../theme/app_colors.dart';
@@ -141,10 +141,10 @@ extension AppWidgetExtension on Widget {
 
   /// [blocProgressBuilder] listens the given [bloc].
   /// If the bloc's state is [BlocInProgressStateBase] then shows the [AppCircularProgressIndicator] component on the sceeen
-  BlocBuilder blocProgressBuilder(BuildContext context, Bloc bloc) {
+  BlocBuilder blocProgressBuilder(Bloc bloc) {
     return BlocBuilder(
         bloc: bloc,
-        builder: (context, state) {
+        builder: (_, state) {
           if ((state is BlocInProgressStateBase)) {
             return Positioned.fill(
               child: Container(

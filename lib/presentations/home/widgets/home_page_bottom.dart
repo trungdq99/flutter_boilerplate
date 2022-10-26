@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../core/widgets/index.dart';
-import '../bloc/index.dart';
+import '../../../core/widgets/widgets.dart';
+import '../bloc/home_bloc.dart';
 
 class HomePageBottom extends StatelessWidget {
   const HomePageBottom({Key? key}) : super(key: key);
