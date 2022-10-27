@@ -16,7 +16,7 @@ class DioClient {
       _dio = Dio();
 
       dio.options
-        ..connectTimeout = NetworkConsts.apiTimeout //5s
+        ..connectTimeout = NetworkConsts.apiTimeout
         ..receiveTimeout = NetworkConsts.apiTimeout;
     }
 
